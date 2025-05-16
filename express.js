@@ -3,19 +3,15 @@ const path = require('path')
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.use(express.static(path.join(__dirname, 'public')))
 
-app.post('/', function(req, res){
-   res.send("You just called the post method at '/hello'!\n");
-});
+app.get('/hello/:name', (req, res) => {
+  res.send('Hello World! ' + req.params.name)
+})
 
 app.get('/about', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'))
 })
-
-
 
 app.get('/json', (req, res)=> {
   res.json({
