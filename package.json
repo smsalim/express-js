@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.2"
   },
-  "name": "express-js",
+  "name": "express",
   "version": "1.0.0",
   "main": "express.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +19,6 @@
     "url": "https://github.com/smsalim/express-js/issues"
   },
   "homepage": "https://github.com/smsalim/express-js#readme",
+  "devDependencies": {},
   "description": ""
 }
