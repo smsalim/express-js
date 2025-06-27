@@ -9,17 +9,18 @@ router.get('/', (req, res)=>{
     res.render('home');
 })
 
-router.get('/blog', (req, res)=>{ 
+router.get('/blog', (req, res)=>{
     // res.sendFile(path.join(__dirname, '../templates/bloghome.html'))
     res.render('blogHome', {
         blogs: blogs
     });
 })
 
-router.get('/blogpost/:slug', (req, res)=>{  
+router.get('/blogpost/:slug', (req, res)=>{
     myBlog = blogs.filter((e)=>{
+        console.log(req.param.slug)
         return e.slug == req.params.slug
-    })  
+    })
     // console.log(myBlog)
     res.render('blogPage', {
         title: myBlog[0].title,
